@@ -1,0 +1,6 @@
+1. In this project i created weather forecast application where it displays current weather based on city name provided.
+2.In addition to that you can get current location weather by clicking on  current location button.
+3. In both case next 5 days predicted weather data also displayed along with current weather.
+
+
+GITHUB LINK: https://github.com/sharadvamsi/weather-forecast.git
