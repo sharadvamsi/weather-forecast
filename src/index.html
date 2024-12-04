@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <meta name="author" content="Sharad Vamsi T">
+    <meta name="description" content="weather forecast app using html,tailwindcss and javascript">
+    <link rel="icon" href="../weather.png" type="image/x-icon">
+  <link href="./output.css" rel="stylesheet">
+  
+</head>
+<body class="bg-gradient-to-r from-orange-400 via-white to-green-500 font-serif">
+  <header class="w-full">
+    <h1 class="p-4 text-xl md:text-2xl lg:text-5xl md:p-6 lg:p-8 bg-gradient-to-r from-orange-400  to-green-500 text-transparent bg-clip-text text-center font-bold">
+        Weather Forecast
+      </h1>
+  </header>
+  <main class="flex flex-col lg:flex-row gap-4 m-5">
+    <section class="flex m-2 lg:m-5 justify-center lg:justify-normal items-center lg:items-start">
+      <div class="flex flex-col">
+        <label for="city-input" class="text-xl md:text-2xl lg:text-4xl font-bold mb-2 md:mb-4 text-blue-800">
+          Enter a City Name
+        </label>
+        <input id="city-input" type="text" placeholder="Enter city name" class="w-80 md:w-96 rounded-md p-2 md:p-3 lg:p-4 bg-orange-100 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-green-500">
+        <select id="search-history-dropdown" class="hidden w-80 md:w-96 rounded-md p-2"></select>
+        <button id="search-btn" class="bg-gray-800  text-white p-2 md:p-3 lg:p-4 rounded-md mt-5 lg:mt-10 w-80 md:w-96">
+          Search
+        </button>
+        <span class="inline-flex gap-4 mt-3 lg:mt-5">
+          <hr class="w-32 md:w-40 mt-3 border-green-500">
+          <span class="text-blue-800 font-medium">OR</span>
+          <hr class="w-32 md:w-40 mt-3 border-orange-500">
+        </span>
+        <button id="current-location-btn" class="bg-gray-800  text-white p-2 md:p-3 lg:p-4 rounded-md mt-2 lg:mt-5 w-80 md:w-96">
+          Current Location
+        </button>
+      </div>
+    </section>
+    <section id="weather-forecast" class="mt-4 lg:mt-8 w-full  flex-col gap-4 hidden">
+      <h4 id="weather-data" class="w-full flex justify-between items-center bg-gradient-to-r from-orange-400 via-white to-green-500 text-blue-800 p-4 lg:p-6 rounded-lg shadow-md mb-4">
+      </h4>
+
+      <h1 class="text-3xl font-bold text-blue-800 m-4">Next 5 days weather</h1>
+      <div id="future-forecast" class="grid grid-cols-1 md:grid-cols-5 gap-2 lg:gap-4">
+      </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
